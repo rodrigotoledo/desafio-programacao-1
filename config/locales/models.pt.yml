@@ -1,0 +1,33 @@
+pt:
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'A validação falhou: %{errors}'
+        restrict_dependent_destroy:
+          has_one: Não é possível excluir o registro pois existe um %{record} dependente
+          has_many: Não é possível excluir o registro pois existem %{record} dependentes
+    models:
+      user:
+        one: Usuário
+        other: Usuários
+      import_purchase:
+        one: Importação
+        other: Importações
+    attributes:
+      user:
+        id: 'Identificação'
+        name: "Nome"
+        email: "Email"
+        updated_at: 'Última atualização'
+        password: 'Senha'
+        password_confirmation: 'Confirmação da senha'
+      import_purchase:
+        id: 'Cód.'
+        user: 'Autor'
+        status: 'Situação'
+        import_file: 'Arquivo'
+        lines_with_errors: 'Linhas com erros'
+        lines_withu_success: 'Linhas corretas'
+        total_lines: 'Linhas analizadas'
+        created_at: 'Criado em'
+        updated_at: 'Última atualização'

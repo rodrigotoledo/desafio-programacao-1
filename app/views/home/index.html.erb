@@ -1,2 +1,23 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1><%= t('informations_to_import') %></h1>
+<%= simple_form_for @import_purchase, url: import_path do |f| %>
+  <%= f.association :user %>
+  <%= f.input :import_file %>
+  <%= f.button :submit %>
+<% end %>
+<hr />
+<h3><%=t('informations_of_imports')%></h3>
+<table class="table table-bordered">
+  <thead>
+    <th><%=ImportPurchase.human_attribute_name(:user)%></th>
+    <th><%=ImportPurchase.human_attribute_name(:status)%></th>
+    <th><%=ImportPurchase.human_attribute_name(:import_file)%></th>
+    <th><%=ImportPurchase.human_attribute_name(:total_lines)%></th>
+    <th><%=ImportPurchase.human_attribute_name(:lines_withu_success)%></th>
+    <th><%=ImportPurchase.human_attribute_name(:lines_with_errors)%></th>
+    <th><%=ImportPurchase.human_attribute_name(:created_at)%></th>
+    <th><%=ImportPurchase.human_attribute_name(:updated_at)%></th>
+  </thead>
+  <% @import_purchases.each do |import_purchase| %>
+    <%= render "import_purchase", import_purchase: import_purchase %>
+  <% end -%>
+</table>

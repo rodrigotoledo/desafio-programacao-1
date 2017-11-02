@@ -12,4 +12,13 @@ RSpec.describe ImportPurchase, type: :model do
       expect(import_purchase.save).to eq(true)
     end
   end
+
+  describe 'Import Line process' do
+    it 'Import lines of file with success' do
+      import_purchase = build(:import_purchase)
+      import_purchase.save
+      expect(import_purchase.import_purchase_lines.count).to eq(4)
+      expect(import_purchase.status).to eq("finished")
+    end
+  end
 end
