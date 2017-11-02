@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171102111437) do
+ActiveRecord::Schema.define(version: 20171102113516) do
+
+  create_table "import_purchases", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "import_file_file_name"
+    t.string "import_file_content_type"
+    t.integer "import_file_file_size"
+    t.datetime "import_file_updated_at"
+    t.index ["user_id"], name: "index_import_purchases_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
