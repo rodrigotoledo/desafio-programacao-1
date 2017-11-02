@@ -45,7 +45,7 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'guard-livereload'
   gem 'guard-bundler'
-  gem 'factory_bot'
+  gem "factory_bot_rails", "~> 4.0"
 end
 
 group :development do
