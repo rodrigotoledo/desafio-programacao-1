@@ -1,9 +1,10 @@
 class HomeController < ApplicationController
   before_action :set_import_purchase, only: :index
   before_action :set_import_purchase_with_params, only: :import
+  before_action :set_import_purchases
 
   def index
-    @import_purchases = ImportPurchase.order("updated_at DESC")
+
   end
 
   def import
@@ -22,6 +23,10 @@ class HomeController < ApplicationController
 
     def set_import_purchase
       @import_purchase = ImportPurchase.new
+    end
+
+    def set_import_purchases
+      @import_purchases = ImportPurchase.order("updated_at DESC")
     end
 
     def set_import_purchase_with_params

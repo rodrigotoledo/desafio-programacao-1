@@ -6,4 +6,9 @@
   <li>
   <%= link_to(t('devise.sessions.sign_in'), new_user_session_path)  %>
   </li>
+  <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+  <li>
+      <%= link_to t('forgot_password'), new_password_path(resource_name) %>
+  </li>
+  <% end -%>
 <% end %>

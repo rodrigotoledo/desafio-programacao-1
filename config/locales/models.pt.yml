@@ -21,6 +21,7 @@ pt:
         updated_at: 'Última atualização'
         password: 'Senha'
         password_confirmation: 'Confirmação da senha'
+        remember_me: 'Lembrar minha senha'
       import_purchase:
         id: 'Cód.'
         user: 'Autor'

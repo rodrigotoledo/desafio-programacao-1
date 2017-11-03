@@ -13,6 +13,11 @@ class ImportPurchaseLine < ApplicationRecord
     self.purchase_count = data[3]
     self.merchant_address = data[4]
     self.merchant_name = data[5]
-    self.save
+    if self.save
+      true
+    else
+      self.result = self.errors.full_messages.to_s
+      false
+    end
   end
 end

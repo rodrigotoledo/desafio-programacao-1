@@ -1,10 +1,10 @@
 <tr id="import_purchase_<%=import_purchase.id%>">
   <td><%=import_purchase.user.name%></td>
-  <td><%=import_purchase.status%></td>
+  <td><%= status_of_import_purchase(import_purchase) %></td>
   <td><%=import_purchase.import_file.original_filename%></td>
   <td><%=import_purchase.import_purchase_lines.count %></td>
   <td><%=import_purchase.lines_with_success %></td>
   <td><%=import_purchase.lines_with_errors %></td>
-  <td><%=l import_purchase.created_at%></td>
-  <td><%=l import_purchase.updated_at%></td>
+  <td><%=l import_purchase.created_at, format: :short %></td>
+  <td><%=l import_purchase.updated_at, format: :short %></td>
 </tr>

@@ -6,11 +6,15 @@ pt:
   loading: 'Carregando...'
   dont: 'Não'
   yes: 'Sim'
+  access_system: 'Preencha os campos para acessar o sistema'
+  login: 'Entrar'
+  forgot_password: 'Esqueceu sua senha?'
+  send_instructions: 'Enviar instruções para resetar minha senha'
   informations_to_import: 'Preencha os campos abaixo começar sua importação'
-  informations_of_imports: 'Importações em ocorrência'
+  informations_of_imports: 'Importações'
   import_status:
     initialized: 'Inicializado'
-    importing: 'Em andamento'
+    running: 'Em andamento'
     finished: 'Finalizado'
 
   forms:

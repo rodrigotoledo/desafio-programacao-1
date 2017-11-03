@@ -40,7 +40,7 @@ pt:
       updated: "Sua conta foi atualizada com sucesso."
     sessions:
       sign_in: "Acessar sistema"
-      sign_out: "Deslogar"
+      sign_out: "Sair"
       signed_in: "Login efetuado com sucesso!"
       signed_out: "Você saiu com sucesso do sistema."
       already_signed_out: "Você saiu com sucesso do sistema."
