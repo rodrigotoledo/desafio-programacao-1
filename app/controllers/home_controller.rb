@@ -4,7 +4,6 @@ class HomeController < ApplicationController
   before_action :set_import_purchases
 
   def index
-
   end
 
   def import
