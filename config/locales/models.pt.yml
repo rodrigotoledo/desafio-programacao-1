@@ -32,3 +32,12 @@ pt:
         lines_importeds: 'Linhas analizadas'
         created_at: 'Criado em'
         updated_at: 'Última atualização'
+      import_purchase_line:
+        id: 'Cód'
+        purchaser_name: 'Comprador'
+        item_description: 'Produto'
+        item_price: 'Preço'
+        purchase_count: 'Quantidade'
+        merchant_address: 'Endereço da loja'
+        merchant_name: 'Loja'
+        result: 'Resultado'

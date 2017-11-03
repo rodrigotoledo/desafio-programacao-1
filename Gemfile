@@ -75,3 +75,4 @@ gem "i18n-js"
 gem 'jquery-rails'
 gem 'rails_layout'
 gem 'simple_form'
+gem 'kaminari'

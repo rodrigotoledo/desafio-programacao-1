@@ -1,0 +1,9 @@
+<tr>
+  <td><%= import_purchase_line.import_purchase.user.name %></td>
+  <td><%= import_purchase_line.purchaser_name %></td>
+  <td><%= import_purchase_line.item_description %></td>
+  <td><%= merchant_price(import_purchase_line) %></td>
+  <td><%= import_purchase_line.purchase_count %></td>
+  <td><%= merchant_address_info(import_purchase_line) %></td>
+  <td><%= import_purchase_line.result %></td>
+</tr>

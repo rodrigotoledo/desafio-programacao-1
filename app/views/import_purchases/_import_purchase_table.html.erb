@@ -1,0 +1,18 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th class="col-md-1"><%= ImportPurchase.human_attribute_name(:user) %></th>
+      <th class="col-md-2"><%= ImportPurchaseLine.human_attribute_name(:purchaser_name) %></th>
+      <th class="col-md-1"><%= ImportPurchaseLine.human_attribute_name(:item_description) %></th>
+      <th class="col-md-1"><%= ImportPurchaseLine.human_attribute_name(:item_price) %></th>
+      <th class="col-md-1"><%= ImportPurchaseLine.human_attribute_name(:purchase_count) %></th>
+      <th class="col-md-2"><%= ImportPurchaseLine.human_attribute_name(:merchant_name) %></th>
+      <th class="col-md-2"><%= ImportPurchaseLine.human_attribute_name(:result) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @import_purchase_lines.each do |import_purchase_line| %>
+      <%= render "import_purchase_line", import_purchase_line: import_purchase_line %>
+    <% end -%>
+  </tbody>
+</table>

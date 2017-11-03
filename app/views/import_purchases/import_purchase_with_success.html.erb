@@ -1,0 +1,3 @@
+<h1><%= t('import_purchase_with_success', user_name: @import_purchase.user.name, created_at: l(@import_purchase.created_at, format: :short)) %></h1>
+<%= render 'import_purchase_table' %>
+<%= paginate @import_purchase_lines %>

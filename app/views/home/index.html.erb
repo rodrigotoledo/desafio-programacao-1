@@ -17,7 +17,9 @@
     <th><%=ImportPurchase.human_attribute_name(:created_at)%></th>
     <th><%=ImportPurchase.human_attribute_name(:updated_at)%></th>
   </thead>
+  <tbody>
   <% @import_purchases.each do |import_purchase| %>
     <%= render "import_purchase", import_purchase: import_purchase %>
   <% end -%>
+  </tbody>
 </table>

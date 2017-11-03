@@ -12,10 +12,15 @@ pt:
   send_instructions: 'Enviar instruções para resetar minha senha'
   informations_to_import: 'Preencha os campos abaixo começar sua importação'
   informations_of_imports: 'Importações'
+  merchant_address_info: '%{merchant_name}, localizada em: %{merchant_address}'
+  merchant_without_name: 'Nome não importado'
+  merchant_without_address: 'Endereço não importado'
   import_status:
     initialized: 'Inicializado'
     running: 'Em andamento'
     finished: 'Finalizado'
+  import_purchase_with_error: 'Importações inválidas feitas pelo Autor %{user_name} no dia %{created_at}'
+  import_purchase_with_success: 'Importações corretas feitas pelo Autor %{user_name} no dia %{created_at}'
 
   forms:
     data: 'Informações'
