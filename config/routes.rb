@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   post 'import', to: 'home#import'
-  match 'import_purchase_with_success/:id', to: 'import_purchases#import_purchase_with_success'
-  match 'import_purchase_with_error/:id', to: 'import_purchases#import_purchase_with_error'
+  get 'import_purchase_with_success/:id', to: 'import_purchases#import_purchase_with_success', as: :import_purchase_with_success
+  get 'import_purchase_with_error/:id', to: 'import_purchases#import_purchase_with_error', as: :import_purchase_with_error
 end

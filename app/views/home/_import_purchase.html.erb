@@ -3,8 +3,8 @@
   <td><%= status_of_import_purchase(import_purchase) %></td>
   <td><%=import_purchase.import_file.original_filename%></td>
   <td><%=import_purchase.lines_importeds %></td>
-  <td><%=link_to import_purchase.lines_with_success, import_purchase_with_success_path(import_purchase) %></td>
-  <td><%=link_to import_purchase.lines_with_errors, import_purchase_with_error_path(import_purchase) %></td>
+  <td><%=link_to_unless(import_purchase.lines_with_success.nil?, import_purchase.lines_with_success, import_purchase_with_success_path(import_purchase)) %></td>
+  <td><%=link_to_unless(import_purchase.lines_with_errors.nil?, import_purchase.lines_with_errors, import_purchase_with_error_path(import_purchase)) %></td>
   <td><%=l import_purchase.created_at, format: :short %></td>
   <td><%=l import_purchase.updated_at, format: :short %></td>
 </tr>
