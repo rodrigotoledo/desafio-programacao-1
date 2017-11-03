@@ -12,15 +12,16 @@ class ImportPurchase < ApplicationRecord
 
   private
     def import_purchase_lines_in_background
-      self.update_attribute(:status, :importing)
+      self.update_attribute(:status, :running)
       File.open(self.import_file.path).each_with_index do |line, index|
         next if index == 0
         import_purchase_line = self.import_purchase_lines.build
         if import_purchase_line.import_line(line)
           self.update_attribute(:lines_with_success, self.lines_with_success.to_i + 1)
         else
-          self.update_attribute(:lines_with_error, self.lines_with_error.to_i + 1)
+          self.update_attribute(:lines_with_errors, self.lines_with_errors.to_i + 1)
         end
+        self.update_attribute(:lines_importeds, self.lines_importeds.to_i + 1)
       end
       self.update_attribute(:status, :finished)
     end

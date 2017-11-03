@@ -29,6 +29,6 @@ pt:
         import_file: 'Arquivo'
         lines_with_errors: 'Linhas com erros'
         lines_withu_success: 'Linhas corretas'
-        total_lines: 'Linhas analizadas'
+        lines_importeds: 'Linhas analizadas'
         created_at: 'Criado em'
         updated_at: 'Última atualização'

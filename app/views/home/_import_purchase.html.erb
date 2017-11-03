@@ -2,7 +2,7 @@
   <td><%=import_purchase.user.name%></td>
   <td><%= status_of_import_purchase(import_purchase) %></td>
   <td><%=import_purchase.import_file.original_filename%></td>
-  <td><%=import_purchase.import_purchase_lines.count %></td>
+  <td><%=import_purchase.lines_importeds %></td>
   <td><%=import_purchase.lines_with_success %></td>
   <td><%=import_purchase.lines_with_errors %></td>
   <td><%=l import_purchase.created_at, format: :short %></td>

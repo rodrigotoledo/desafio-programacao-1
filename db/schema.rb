@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171102175625) do
+ActiveRecord::Schema.define(version: 20171103005508) do
 
   create_table "import_purchase_lines", force: :cascade do |t|
     t.integer "import_purchase_id"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20171102175625) do
     t.datetime "import_file_updated_at"
     t.integer "lines_with_errors"
     t.integer "lines_with_success"
+    t.integer "lines_importeds"
     t.index ["user_id"], name: "index_import_purchases_on_user_id"
   end
 
