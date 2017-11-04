@@ -14,6 +14,7 @@ class HomeController < ApplicationController
 						lines_with_success: import_purchase.lines_with_success,
 						lines_with_errors: import_purchase.lines_with_errors,
 						lines_importeds: import_purchase.lines_importeds,
+						updated_at: I18n.l(import_purchase.updated_at, format: :short),
 						status: t("import_status.#{import_purchase.status.to_s}"),
 					}
 				end

@@ -14,5 +14,6 @@ App.import_purchase_lines = App.cable.subscriptions.create 'ImportPurchaseLinesC
         $('#import_purchase_lines_with_success_'+id).html data['import_purchases'][i].lines_with_success
         $('#import_purchase_lines_with_errors_'+id).html data['import_purchases'][i].lines_with_errors
         $('#import_purchase_lines_status_'+id).html data['import_purchases'][i].status
+        $('#import_purchase_lines_updated_at_'+id).html data['import_purchases'][i].updated_at
         i++
     return
