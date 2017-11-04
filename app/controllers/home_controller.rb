@@ -15,6 +15,7 @@ class HomeController < ApplicationController
 						lines_with_errors: import_purchase.lines_with_errors,
 						lines_importeds: import_purchase.lines_importeds,
 						updated_at: I18n.l(import_purchase.updated_at, format: :short),
+						total: ActionController::Base.helpers.number_to_currency(import_purchase.total),
 						status: t("import_status.#{import_purchase.status.to_s}"),
 					}
 				end

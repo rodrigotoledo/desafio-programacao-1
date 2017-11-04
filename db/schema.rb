@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171103005508) do
+ActiveRecord::Schema.define(version: 20171104200206) do
 
   create_table "import_purchase_lines", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "import_purchase_id"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20171103005508) do
     t.string "result"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "total", limit: 24
     t.index ["import_purchase_id"], name: "index_import_purchase_lines_on_import_purchase_id"
   end
 
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(version: 20171103005508) do
     t.integer "lines_with_errors"
     t.integer "lines_with_success"
     t.integer "lines_importeds"
+    t.float "total", limit: 24
     t.index ["user_id"], name: "index_import_purchases_on_user_id"
   end
 

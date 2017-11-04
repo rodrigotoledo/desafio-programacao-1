@@ -15,6 +15,8 @@ class ImportPurchaseLine < ApplicationRecord
 		self.purchase_count = data[3]
 		self.merchant_address = data[4]
 		self.merchant_name = data[5]
+		self.total = self.item_price.to_f * self.purchase_count.to_i
+		self.import_purchase.update_attribute(:total, self.total + self.import_purchase.total.to_f)
 		if self.save
 			true
 		else

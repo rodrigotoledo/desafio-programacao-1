@@ -30,6 +30,7 @@ pt:
         lines_with_errors: 'Linhas com erros'
         lines_withu_success: 'Linhas corretas'
         lines_importeds: 'Linhas analizadas'
+        total: 'Receita bruta'
         created_at: 'Criado em'
         updated_at: 'Última atualização'
       import_purchase_line:
@@ -40,4 +41,5 @@ pt:
         purchase_count: 'Quantidade'
         merchant_address: 'Endereço da loja'
         merchant_name: 'Loja'
+        total: 'Receita'
         result: 'Resultado'
