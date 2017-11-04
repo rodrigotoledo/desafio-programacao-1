@@ -8,4 +8,9 @@ Rails.application.routes.draw do
   post 'import', to: 'home#import'
   get 'import_purchase_with_success/:id', to: 'import_purchases#import_purchase_with_success', as: :import_purchase_with_success
   get 'import_purchase_with_error/:id', to: 'import_purchases#import_purchase_with_error', as: :import_purchase_with_error
+
+  require 'sidekiq/web'
+  authenticate :user do
+    mount Sidekiq::Web => '/sidekiq'
+  end
 end

@@ -27,7 +27,7 @@ class ImportPurchase < ApplicationRecord
 
 	private
 		def import_in_background
-			ImportPurchaseJob.perform_later(self)
+			ImportPurchaseJob.perform_later(self.id)
 		end
 
 		def set_initial_status

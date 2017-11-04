@@ -12,11 +12,11 @@
 
 ActiveRecord::Schema.define(version: 20171103005508) do
 
-  create_table "import_purchase_lines", force: :cascade do |t|
-    t.integer "import_purchase_id"
+  create_table "import_purchase_lines", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "import_purchase_id"
     t.string "purchaser_name"
     t.text "item_description"
-    t.float "item_price"
+    t.float "item_price", limit: 24
     t.integer "purchase_count"
     t.string "merchant_address"
     t.string "merchant_name"
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 20171103005508) do
     t.index ["import_purchase_id"], name: "index_import_purchase_lines_on_import_purchase_id"
   end
 
-  create_table "import_purchases", force: :cascade do |t|
-    t.integer "user_id"
+  create_table "import_purchases", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20171103005508) do
     t.index ["user_id"], name: "index_import_purchases_on_user_id"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -59,4 +59,6 @@ ActiveRecord::Schema.define(version: 20171103005508) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "import_purchase_lines", "import_purchases"
+  add_foreign_key "import_purchases", "users"
 end
