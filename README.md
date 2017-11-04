@@ -1,24 +1,20 @@
-# README
+# Instruções para configuração
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* rodar o comando
+rails db:drop db:create db:migrate db:seed
 
-Things you may want to cover:
 
-* Ruby version
+* iniciar o servidor com o comando
 
-* System dependencies
+guard
 
-* Configuration
 
-* Database creation
+* acessar a url http://localhost:3001
 
-* Database initialization
+login: admin@desafio.com.br
+senha: asdqwe123
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+* acessar o processamento de dados que estão na fila
 
-* Deployment instructions
-
-* ...
+para acessar o andamento das tarefas em background entre em http://localhost:3001/sidekiq
