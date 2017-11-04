@@ -19,8 +19,8 @@ pt:
     initialized: 'Inicializado'
     running: 'Em andamento'
     finished: 'Finalizado'
-  import_purchase_with_error: 'Importações inválidas feitas pelo Autor %{user_name} no dia %{created_at}'
-  import_purchase_with_success: 'Importações corretas feitas pelo Autor %{user_name} no dia %{created_at}'
+  import_purchase_with_error: 'Importações inválidas do código %{import_purchase_id} no dia %{created_at}'
+  import_purchase_with_success: 'Importações corretas do código %{import_purchase_id} no dia %{created_at}'
 
   forms:
     data: 'Informações'

@@ -1,5 +1,7 @@
 development:
   :concurrency: 10
+test:
+  :concurrency: 10
 production:
   :concurrency: 50
 :queues:

@@ -33,7 +33,7 @@ pt:
         created_at: 'Criado em'
         updated_at: 'Última atualização'
       import_purchase_line:
-        id: 'Cód'
+        id: 'Cód.'
         purchaser_name: 'Comprador'
         item_description: 'Produto'
         item_price: 'Preço'

@@ -16,23 +16,11 @@ class ImportPurchaseLine < ApplicationRecord
 		self.merchant_address = data[4]
 		self.merchant_name = data[5]
 		if self.save
-			ActionCable.server.broadcast("import_purchase_lines_channel",
-				import_purchase_id: self.import_purchase_id,
-				import_purchase_lines_importeds: self.import_purchase.import_purchase_lines.count,
-				import_purchase_lines_with_success: self.import_purchase.import_purchase_lines.with_success.count,
-				import_purchase_lines_with_error: self.import_purchase.import_purchase_lines.with_errors.count
-			)
 			true
 		else
 			self.valid?
 			self.result = self.errors.full_messages.join(", ")
 			self.save(validate: false)
-			ActionCable.server.broadcast("import_purchase_lines_channel",
-				import_purchase_id: self.import_purchase_id,
-				import_purchase_lines_importeds: self.import_purchase.import_purchase_lines.count,
-				import_purchase_lines_with_success: self.import_purchase.import_purchase_lines.with_success.count,
-				import_purchase_lines_with_error: self.import_purchase.import_purchase_lines.with_errors.count
-			)
 			false
 		end
 	end

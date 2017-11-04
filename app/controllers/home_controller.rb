@@ -25,7 +25,7 @@ class HomeController < ApplicationController
     end
 
     def set_import_purchases
-      @import_purchases = ImportPurchase.order("updated_at DESC")
+      @import_purchases = ImportPurchase.order("id DESC")
     end
 
     def set_import_purchase_with_params
