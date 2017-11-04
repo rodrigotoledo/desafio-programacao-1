@@ -1,0 +1,23 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  host: localhost
+  username: root
+  password: root
+  pool: 50
+  timeout: 5000
+
+development:
+  <<: *default
+  database: import_purchase_development
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: import_purchase_test
+
+production:
+  <<: *default
+  database: import_purchase_production
