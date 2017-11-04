@@ -1,3 +1,4 @@
 <h1><%= t('import_purchase_with_error', import_purchase_id: @import_purchase.id, created_at: l(@import_purchase.created_at, format: :short)) %></h1>
+<%= paginate @import_purchase_lines %>
 <%= render 'import_purchase_table' %>
 <%= paginate @import_purchase_lines %>

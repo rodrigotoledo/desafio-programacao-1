@@ -1,6 +1,6 @@
 module ImportPurchasesHelper
-  def status_of_import_purchase(import_purchase)
-    t("import_status.#{import_purchase.status}")
+  def status_of_import_purchase(status)
+    t("import_status.#{status}")
   end
 
   def merchant_address_info(import_purchase_line)

@@ -6,6 +6,7 @@
 <% end %>
 <hr />
 <h3><%=t('informations_of_imports')%></h3>
+<%= paginate @import_purchases %>
 <table class="table table-bordered">
   <thead>
     <th><%=ImportPurchase.human_attribute_name(:id)%></th>
@@ -24,3 +25,4 @@
   <% end -%>
   </tbody>
 </table>
+<%= paginate @import_purchases %>

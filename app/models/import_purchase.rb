@@ -8,7 +8,7 @@ class ImportPurchase < ApplicationRecord
 	validates :user_id, presence: true
 
 	before_create :set_initial_status
-	after_create :import_in_background
+	after_create_commit :import_in_background
 
 	def import_purchase_lines_in_background
 		self.update_attribute(:status, :running)
